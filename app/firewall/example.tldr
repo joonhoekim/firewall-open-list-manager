@@ -1,0 +1,476 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 3,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 10,
+			"com.tldraw.shape.note": 9,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 1,
+			"com.tldraw.shape.arrow": 6,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 5,
+			"com.tldraw.shape.video": 4,
+			"com.tldraw.binding.arrow": 1
+		}
+	},
+	"records": [
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 1204.3996084201274,
+			"y": 563.7885529903699,
+			"lastActivityTimestamp": 1752484604986,
+			"meta": {}
+		},
+		{
+			"x": 1046.0902997585108,
+			"y": 528.0520148383822,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Op2Oedo2gmHwDvVjYf5BQ",
+			"type": "geo",
+			"props": {
+				"w": 544.5094778055873,
+				"h": 179.30818939539793,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "$$SYSTEM"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "NAME:[시스템이름2]"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "ADDRESS:[IPv4 주소 또는 도메인]"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "DESC:[시스템에 대한 설명(선택적)]"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:CIkEFA874R8DSGh8-1nEG",
+			"index": "a33cI",
+			"typeName": "shape"
+		},
+		{
+			"x": 69.40022243590283,
+			"y": 528.0520148383822,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:p37LWrGFq6DDJ9dghbZq9",
+			"type": "geo",
+			"props": {
+				"w": 544.5094778055873,
+				"h": 179.30818939539793,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "$$"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "NAME:[시스템이름1]"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "ADDRESS:[IPv4 주소 또는 도메인]"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "DESC:[시스템에 대한 설명(선택적)]"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:CIkEFA874R8DSGh8-1nEG",
+			"index": "a28kK",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:zbyCqj70D1wr-28R2qUCt",
+			"type": "arrow",
+			"fromId": "shape:9R3Qn1khu2A4hPux4juNh",
+			"toId": "shape:p37LWrGFq6DDJ9dghbZq9",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.5,
+					"y": 0.49999999999999994
+				},
+				"snap": "center",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"editingShapeId": "shape:9R3Qn1khu2A4hPux4juNh",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:9R3Qn1khu2A4hPux4juNh"
+			],
+			"hoveredShapeId": "shape:Op2Oedo2gmHwDvVjYf5BQ",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:CIkEFA874R8DSGh8-1nEG",
+			"pageId": "page:CIkEFA874R8DSGh8-1nEG",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 55.042054288265504,
+			"y": 285.8518191263654,
+			"z": 0.46607954729532564,
+			"meta": {},
+			"id": "camera:page:CIkEFA874R8DSGh8-1nEG",
+			"typeName": "camera"
+		},
+		{
+			"x": 358.78987497593425,
+			"y": 625.1498587827351,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:9R3Qn1khu2A4hPux4juNh",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "m",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 673.9732697313902,
+					"y": -3.8077585860529553
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "$$\nPORT:[포트 - 22, 3000~3001]\nDIRECTION:[단방향 | 양방향]\nPURPOSE:[왜 오픈하는지 목적]",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:CIkEFA874R8DSGh8-1nEG",
+			"index": "a44xl",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:lE3cv5xHbS2v062SInZvY",
+			"type": "arrow",
+			"fromId": "shape:9R3Qn1khu2A4hPux4juNh",
+			"toId": "shape:Op2Oedo2gmHwDvVjYf5BQ",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.49999999999999917,
+					"y": 0.49999999999999994
+				},
+				"snap": "center",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "page:CIkEFA874R8DSGh8-1nEG",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "방화벽GUI",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 837,
+				"h": 665
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:CIkEFA874R8DSGh8-1nEG",
+			"typeName": "instance"
+		},
+		{
+			"x": 79.25307272410828,
+			"y": 27.5800631172566,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:4Qeqx7sZKv0F9VamI0ok1",
+			"type": "geo",
+			"props": {
+				"w": 493,
+				"h": 239.8125,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 207.8125,
+				"url": "",
+				"scale": 1,
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "규칙"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "$$ 로 시작하는 화살표, 사각형 오브젝트는 처리해야 하는 오브젝트"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "하나의 오브젝트 안에 여러개의 정보가 들어가 있을 수 있음"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "예를 들면, 하나의 사각형(시스템)의 여러개의 ADDRESS를 가질 수 있고, 하나의 화살표(방화벽 오픈)이 여러개의 포트를 가질 수 있음"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "같은 시스템인데, 특정 주소만 특정 포트로 뚫는 등 암묵적인 1:N 관계는 별도의 오브젝트를 두어 구분하기로 약속함."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:CIkEFA874R8DSGh8-1nEG",
+			"index": "a1",
+			"typeName": "shape"
+		}
+	]
+}
