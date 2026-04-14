@@ -6,8 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Download, FileText, Loader2 } from "lucide-react"
+import { Download, FileText, Loader2, FileSpreadsheet } from "lucide-react"
 import { toast } from "sonner"
+import * as XLSX from "xlsx"
 import { parseTldrToCSV, convertToCSVString, type FirewallCsvRow } from "./actions"
 
 export function FirewallAnalyzer() {
@@ -89,6 +90,61 @@ export function FirewallAnalyzer() {
     }
   }
 
+  const handleExportExcel = () => {
+    if (data.length === 0) {
+      toast.error('내보낼 데이터가 없습니다.')
+      return
+    }
+
+    try {
+      const headers = [
+        "Source System",
+        "Source Address",
+        "Target System",
+        "Target Address",
+        "Port",
+        "Direction",
+        "Purpose",
+        "Description",
+        "Status",
+      ]
+
+      const rows = data.map((row) => [
+        row.sourceSystem,
+        row.sourceAddress,
+        row.targetSystem,
+        row.targetAddress,
+        row.port,
+        row.direction,
+        row.purpose,
+        row.description,
+        row.status,
+      ])
+
+      const ws = XLSX.utils.aoa_to_sheet([headers, ...rows])
+
+      // 열 너비 자동 조정
+      ws["!cols"] = headers.map((h, i) => {
+        const maxLen = Math.max(
+          h.length,
+          ...rows.map((r) => (r[i] ?? "").toString().length)
+        )
+        return { wch: Math.min(maxLen + 2, 40) }
+      })
+
+      const wb = XLSX.utils.book_new()
+      XLSX.utils.book_append_sheet(wb, ws, "Firewall Rules")
+
+      const fileName = `firewall_rules_${new Date().toISOString().split("T")[0]}.xlsx`
+      XLSX.writeFile(wb, fileName)
+
+      toast.success("Excel 파일이 다운로드되었습니다.")
+    } catch (error) {
+      console.error("Excel 내보내기 오류:", error)
+      toast.error("Excel 내보내기 중 오류가 발생했습니다.")
+    }
+  }
+
   return (
     <div className="space-y-6">
       {/* 파일 업로드 섹션 */}
@@ -145,19 +201,25 @@ export function FirewallAnalyzer() {
                   {data.length}개의 방화벽 규칙이 분석되었습니다.
                 </CardDescription>
               </div>
-              <Button onClick={handleExportCSV} variant="outline" disabled={isExporting}>
-                {isExporting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    내보내는 중...
-                  </>
-                ) : (
-                  <>
-                    <Download className="mr-2 h-4 w-4" />
-                    CSV 내보내기
-                  </>
-                )}
-              </Button>
+              <div className="flex gap-2">
+                <Button onClick={handleExportCSV} variant="outline" disabled={isExporting}>
+                  {isExporting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      내보내는 중...
+                    </>
+                  ) : (
+                    <>
+                      <Download className="mr-2 h-4 w-4" />
+                      CSV 내보내기
+                    </>
+                  )}
+                </Button>
+                <Button onClick={handleExportExcel} variant="outline">
+                  <FileSpreadsheet className="mr-2 h-4 w-4" />
+                  Excel 내보내기
+                </Button>
+              </div>
             </div>
           </CardHeader>
           <CardContent>
